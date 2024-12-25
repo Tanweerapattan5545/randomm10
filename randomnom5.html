@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สุ่มตัวเลข</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .number-display {
+            font-size: 40px;
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid #000;
+            display: inline-block;
+            width: 100px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>สุ่มตัวเลข 1 ถึง 10</h1>
+    <div id="numberDisplay" class="number-display">กดปุ่มสุ่ม</div>
+    <br>
+    <button onclick="generateNumber()">สุ่มเลข</button>
+
+    <script>
+        function generateNumber() {
+            // สุ่มเลขระหว่าง 1 ถึง 10
+            const randomNumber = Math.floor(Math.random() * 10) + 1;
+            // แสดงผลที่ div
+            document.getElementById("numberDisplay").textContent = randomNumber;
+        }
+    </script>
+
+</body>
+</html>
